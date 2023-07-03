@@ -35,7 +35,7 @@ const s4aProxy = s4aMiddleware(siteToken);
 
 export function middleware(request: NextRequest) {
   const response = s4aProxy(request);
-  // add other middleware here if needed
+  // call other middlewares here if needed
   return response;
 }
 
