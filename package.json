@@ -1,0 +1,22 @@
+{
+  "name": "nextjs-middleware-s4a",
+  "version": "0.1.0",
+  "author": "SEO4Ajax <support@seo4ajax.com>",
+  "description": "Middleware for integrating SEO4Ajax with NextJS",
+  "keywords": [
+    "nextjs",
+    "seo",
+    "Ajax"
+  ],
+  "homepage": "https://www.seo4ajax.com",
+  "bugs": "https://github.com/seo4ajax/nextjs-middleware-s4a/issues",
+  "main": "./index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seo4ajax/nextjs-middleware-s4a.git"
+  },
+  "devDependencies": {
+    "next": "^13.4.7"
+  },
+  "license": "MIT"
+}
