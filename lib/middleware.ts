@@ -53,7 +53,7 @@ export default function s4aMiddleware(siteToken: string) {
 
       const requestHeaders = new Headers(request.headers);
       if (xForwardedFor) {
-        requestHeaders.set("x-forwarded-for", xForwardedFor || "");
+        requestHeaders.set("x-forwarded-for", xForwardedFor);
       }
       // override host header to fix DNS resolution
       requestHeaders.set("host", s4aHost);
