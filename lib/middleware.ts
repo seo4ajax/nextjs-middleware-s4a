@@ -13,7 +13,10 @@ export default function s4aMiddleware(siteToken: string) {
 
   async function s4aProxy(
     request: NextRequest,
-    options?: { pathPattern: RegExp },
+    options?: {
+      pathPattern: RegExp,
+      userAgentPattern: RegExp
+    }
   ) {
     const { nextUrl, headers, method } = request;
 
@@ -79,7 +82,8 @@ export default function s4aMiddleware(siteToken: string) {
 
     function isBotTest(userAgent: string | null) {
       if (userAgent) {
-        const isBot = userAgent!.match(userAgentTest) &&
+        const userAgentPattern = options && options.userAgentPattern ? options.userAgentPattern : userAgentTest;
+        const isBot = userAgent!.match(userAgentPattern) &&
           (options && options.pathPattern
             ? path.match(options.pathPattern)
             : true);

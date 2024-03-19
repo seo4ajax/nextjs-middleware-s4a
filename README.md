@@ -55,10 +55,13 @@ export const config = {
 
 The `s4aMiddleware` function requires one mandatory parameter: the token of the
 site on SEO4Ajax. The second parameter is optional, it is an object with the
-following property:
+following optional properties:
 
 - `pathPattern`: a regular expression indicating when paths that must be proxied
   to SEO4Ajax (`undefined` by default)
+- `userAgentPattern`: a regular expression used to filter the relevant 
+  user-agents (see default value 
+  [here](https://github.com/seo4ajax/nextjs-middleware-s4a/blob/main/lib/middleware.ts#L5-L8))
 
 ## How it works
 
